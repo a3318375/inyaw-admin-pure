@@ -22,6 +22,11 @@ export type UserResult = {
   };
 };
 
+export type LoginResult = {
+  success: boolean;
+  data: string;
+};
+
 export type RefreshTokenResult = {
   success: boolean;
   data: {
@@ -36,7 +41,11 @@ export type RefreshTokenResult = {
 
 /** 登录 */
 export const getLogin = (data?: object) => {
-  return http.request<UserResult>("post", "/login", { data });
+  return http.request<LoginResult>("post", "/api/login", { data });
+};
+
+export const getUserInfo = () => {
+  return http.request<UserResult>("get", "/api/user/info", {});
 };
 
 /** 刷新`token` */
