@@ -79,7 +79,6 @@ export function setToken(token: string) {
         reject(error);
       });
   });
-  console.log(111, userInfo);
 
   if (userInfo.username && userInfo.roles) {
     const { username, roles } = data;
