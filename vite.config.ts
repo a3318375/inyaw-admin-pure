@@ -27,8 +27,8 @@ export default ({ mode }: ConfigEnv): UserConfigExport => {
       proxy: {
         "/api": {
           // 这里填写后端地址
-          target: "http://localhost:8080",
-          //target: "https://admin.inyaw.com/api",
+          //target: "http://localhost:8080",
+          target: "https://admin.inyaw.com/api",
           changeOrigin: true,
           rewrite: path => path.replace(/^\/api/, "")
         }
