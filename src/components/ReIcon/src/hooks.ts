@@ -39,7 +39,7 @@ export function useRenderIcon(icon: any, attrs?: iconType): Component {
       name: "OfflineIcon",
       render() {
         return h(IconifyIconOffline, {
-          icon,
+          icon: icon,
           ...attrs
         });
       }
@@ -52,7 +52,7 @@ export function useRenderIcon(icon: any, attrs?: iconType): Component {
         const IconifyIcon =
           icon && icon.includes(":") ? IconifyIconOnline : IconifyIconOffline;
         return h(IconifyIcon, {
-          icon: icon,
+          icon,
           ...attrs
         });
       }
