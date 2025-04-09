@@ -21,7 +21,7 @@ type ResultTable = {
 
 /** 获取系统管理-用户管理列表 */
 export const getUserList = (data?: object) => {
-  return http.request<ResultTable>("post", "/user", { data });
+  return http.request<ResultTable>("get", "/api/sys/user/list", { data });
 };
 
 /** 系统管理-用户管理-获取所有角色列表 */
@@ -36,17 +36,17 @@ export const getRoleIds = (data?: object) => {
 
 /** 获取系统管理-角色管理列表 */
 export const getRoleList = (data?: object) => {
-  return http.request<ResultTable>("post", "/role", { data });
+  return http.request<ResultTable>("get", "/api/sys/role/list", { data });
 };
 
 /** 获取系统管理-菜单管理列表 */
 export const getMenuList = (data?: object) => {
-  return http.request<Result>("post", "/menu", { data });
+  return http.request<Result>("get", "/api/menu/findMenuList", { data });
 };
 
 /** 获取系统管理-部门管理列表 */
 export const getDeptList = (data?: object) => {
-  return http.request<Result>("get", "/api/dept/list", { data });
+  return http.request<Result>("get", "/api/sys/dept/list", { data });
 };
 
 /** 获取系统监控-在线用户列表 */

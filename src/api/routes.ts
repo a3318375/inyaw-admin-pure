@@ -6,5 +6,5 @@ type Result = {
 };
 
 export const getAsyncRoutes = () => {
-  return http.request<Result>("get", "/api/menu/findMenuList?enable=true");
+  return http.request<Result>("get", "/api/menu/findMenuList");
 };
