@@ -45,7 +45,7 @@ export const getLogin = (data?: object) => {
 };
 
 export const getUserInfo = () => {
-  return http.request<UserResult>("get", "/api/user/info", {});
+  return http.request<UserResult>("get", "/api/sys/user/info", {});
 };
 
 /** 刷新`token` */
